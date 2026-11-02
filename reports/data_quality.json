@@ -1,0 +1,40 @@
+{
+  "source": {
+    "url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "archive": "adult.zip",
+    "sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "bytes": 620237
+  },
+  "rows": {
+    "adult.data": 32561,
+    "adult.test": 16281
+  },
+  "target_counts": {
+    "adult.data": {
+      "0": 24720,
+      "1": 7841
+    }
+  },
+  "missing_values": {
+    "adult.data": {
+      "workclass": 1836,
+      "occupation": 1843,
+      "native-country": 583
+    },
+    "adult.test": {
+      "workclass": 963,
+      "occupation": 966,
+      "native-country": 274
+    }
+  },
+  "duplicate_rows": {
+    "adult.data_features": 25,
+    "adult.test_features": 6,
+    "unique_feature_fingerprints_shared_across_official_files": 26
+  },
+  "modeling": {
+    "protected_attributes_in_features": false,
+    "sampling_weights_used": false,
+    "test_used_for_model_or_policy_selection": false
+  }
+}

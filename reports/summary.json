@@ -1,0 +1,87 @@
+{
+  "project": "Adult Income Fairness and Threshold Policy Audit",
+  "source": {
+    "dataset": "UCI Adult",
+    "source_url": "https://archive.ics.uci.edu/static/public/2/adult.zip",
+    "doi": "10.24432/C5XW20",
+    "license": "CC BY 4.0",
+    "archive_bytes": 620237,
+    "archive_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "expected_sha256": "7537312dd56c2b98035880805ce99e68183a30ee468aa5329d6df0fbb3cc21bb",
+    "adult_data_rows": 32561,
+    "adult_test_rows": 16281,
+    "dataset_credit": "Becker, B. & Kohavi, R. (1996). Adult [Dataset]. UCI Machine Learning Repository."
+  },
+  "split": {
+    "adult_data_rows": 32561,
+    "model_train_rows": 26048,
+    "policy_validation_rows": 6513,
+    "locked_official_test_rows": 16281,
+    "random_state": 2026,
+    "validation_size": 0.2,
+    "test_used_for_selection": false
+  },
+  "uncertainty": {
+    "method": "nonparametric person-level bootstrap with replacement",
+    "replicates": 2000,
+    "ci_quantiles": [
+      0.025,
+      0.975
+    ],
+    "random_state": 2026
+  },
+  "primary_model": [
+    {
+      "model": "primary",
+      "policy": "global",
+      "n_test": 16281,
+      "n_features": 11,
+      "global_validation_threshold": 0.23190863119863991,
+      "validation_tpr_target": null,
+      "roc_auc": 0.903672084961404,
+      "average_precision": 0.7581631858977459,
+      "brier_score": 0.10269672289790943,
+      "log_loss": 0.32040929710417887,
+      "accuracy": 0.8021006080707573,
+      "balanced_accuracy": 0.8201604976141145,
+      "precision": 0.5524546065904505,
+      "recall": 0.8543941757670307,
+      "selection_rate": 0.3653338247036423
+    },
+    {
+      "model": "primary",
+      "policy": "equal_opportunity_by_sex",
+      "n_test": 16281,
+      "n_features": 11,
+      "global_validation_threshold": 0.23190863119863991,
+      "validation_tpr_target": 0.8042553191489362,
+      "roc_auc": 0.903672084961404,
+      "average_precision": 0.7581631858977459,
+      "brier_score": 0.10269672289790943,
+      "log_loss": 0.32040929710417887,
+      "accuracy": 0.8224310546035256,
+      "balanced_accuracy": 0.8098533277881175,
+      "precision": 0.5937929679827146,
+      "recall": 0.7860114404576183,
+      "selection_rate": 0.3126957803574719
+    },
+    {
+      "model": "primary",
+      "policy": "equal_opportunity_by_race",
+      "n_test": 16281,
+      "n_features": 11,
+      "global_validation_threshold": 0.23190863119863991,
+      "validation_tpr_target": 0.5714285714285714,
+      "roc_auc": 0.903672084961404,
+      "average_precision": 0.7581631858977459,
+      "brier_score": 0.10269672289790943,
+      "log_loss": 0.32040929710417887,
+      "accuracy": 0.8476752042257847,
+      "balanced_accuracy": 0.7439464309573589,
+      "precision": 0.7401547116736991,
+      "recall": 0.547321892875715,
+      "selection_rate": 0.17468214483139857
+    }
+  ],
+  "interpretation": "Historical benchmark results only; not a hiring, lending, benefits, or individual decision tool."
+}

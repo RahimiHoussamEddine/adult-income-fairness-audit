@@ -1,0 +1,17 @@
+model,policy,group_dimension,group_value,threshold,global_validation_threshold,validation_tpr_target
+primary,global,global,all,0.23190863119863991,0.23190863119863991,
+primary,equal_opportunity_by_sex,sex,Female,0.23701555095203436,0.23190863119863991,0.8042553191489362
+primary,equal_opportunity_by_sex,sex,Male,0.30365370254114277,0.23190863119863991,0.8042553191489362
+primary,equal_opportunity_by_race,race,Amer-Indian-Eskimo,0.2665265278826748,0.23190863119863991,0.5714285714285714
+primary,equal_opportunity_by_race,race,Asian-Pac-Islander,0.521707390258306,0.23190863119863991,0.5714285714285714
+primary,equal_opportunity_by_race,race,Black,0.4315256706336262,0.23190863119863991,0.5714285714285714
+primary,equal_opportunity_by_race,race,Other,0.35508737699711623,0.23190863119863991,0.5714285714285714
+primary,equal_opportunity_by_race,race,White,0.5394854099885609,0.23190863119863991,0.5714285714285714
+no_marital_relationship,global,global,all,0.21085763628284,0.21085763628284,
+no_marital_relationship,equal_opportunity_by_sex,sex,Female,0.21146040340832625,0.21085763628284,0.7063829787234043
+no_marital_relationship,equal_opportunity_by_sex,sex,Male,0.2873722475515659,0.21085763628284,0.7063829787234043
+no_marital_relationship,equal_opportunity_by_race,race,Amer-Indian-Eskimo,0.7463817435593348,0.21085763628284,0.14285714285714285
+no_marital_relationship,equal_opportunity_by_race,race,Asian-Pac-Islander,0.8917331351948331,0.21085763628284,0.14285714285714285
+no_marital_relationship,equal_opportunity_by_race,race,Black,0.8975691373729997,0.21085763628284,0.14285714285714285
+no_marital_relationship,equal_opportunity_by_race,race,Other,0.7994091863730407,0.21085763628284,0.14285714285714285
+no_marital_relationship,equal_opportunity_by_race,race,White,0.882051802421181,0.21085763628284,0.14285714285714285
